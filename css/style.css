@@ -1,0 +1,238 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab);
+
+body {
+  margin-top: 2em;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #222;
+}
+
+
+/* links */
+a {
+  color: rgb(34,124,238);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: rgb(215,83,46);
+  -moz-transition: color 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+/* structure */
+header,
+main,
+footer {
+  margin: 0 auto;
+  width: 650px;
+  line-height: 1.5;
+}
+
+section {
+  padding: 2em;
+  margin: 3em 0;
+  border: 1px solid #ccc;
+}
+
+section:last-child {
+  margin-bottom: 1em;
+}
+
+footer {
+  margin-bottom: 3em;
+  overflow: auto;
+}
+
+footer > p:first-child {
+  float: left;
+}
+
+footer > p:first-child a:before {
+  content: "\2190" " ";
+}
+
+footer > p:last-child {
+  float: right;
+}
+
+footer > p:last-child a:after {
+  content: "\2192" " ";
+}
+
+
+/* headings */
+h1, h2 {
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+h2 span {
+  display: block;
+}
+
+
+/* tables */
+table {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+table th,
+table, td {
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 0.5em;
+}
+
+
+/* code */
+code {
+  background: #eee;
+  padding: 0.1em 0.25em;
+}
+
+code > span {
+  color: #999;
+}
+
+
+/* address */
+address > p {
+  font-size: 0.8em;
+  display: inline;
+}
+
+address > p:after {
+  content: ", ";
+}
+
+address > p:first-child:after,
+address > p:last-child:after {
+  content: "";
+}
+
+/* iframe */
+iframe {
+  border: 1px solid #222;
+}
+
+
+/* ids */
+#retrospective ol li {
+  font-size: 24px;
+  margin-bottom: 1em;
+}
+
+#jpg img {
+  border: 1px solid #222;
+}
+
+#svg img {
+  margin-right: 1em;
+}
+
+#png img:last-child {
+  margin-right: 0;
+}
+
+#svg img.sm {
+  width: 50px;
+}
+
+#svg img.md {
+  width: 100px;
+}
+
+#svg img.lg {
+  width: 200px;
+}
+
+#browsers {
+  margin-bottom: 2.5em;
+}
+
+#browsers img:first-child {
+  position: relative;
+  top: 8px;
+}
+
+#browsers img[src$=".svg"] {
+  width: 80px;
+  display: inline-block;
+  padding-right: 2.5em;
+}
+
+#browsers img[src$=".svg"]:last-child {
+  padding-right: 0;
+}
+
+
+/* classes */
+.photo {
+  border: 1px solid #222;
+}
+
+.resized {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hidden {
+  color: #eee;
+  background: #eee;
+}
+
+.hidden:hover {
+  color: #222;
+}
+
+
+/* print */
+@media print {
+  * {
+    color: #000;
+    background: transparent;
+  }
+
+  @page {
+    margin: 0.5in;
+  }
+
+  body {
+    font-size: 12pt;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  p {
+    margin: 0.5em 0;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  footer,
+  .no-print {
+    display: none;
+  }
+
+  a[href^="http"]:after {
+    content: " (" attr(href) ") ";
+  }
+
+}
