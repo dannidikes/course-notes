@@ -91,11 +91,13 @@ table, td {
 
 
 /* code */
+pre.code,
 code {
   background: #eee;
   padding: 0.1em 0.25em;
 }
 
+pre.code > span,
 code > span {
   color: #999;
 }

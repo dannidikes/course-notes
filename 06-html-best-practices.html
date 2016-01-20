@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>HTML Best Practices</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>HTML Best Practices</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Develop good habits</h2>
+
+        <p>Understanding how to code is one thing; coding properly is another.</p>
+
+        <p>Developing good habits now will help you avoid bugs as you are learning and when you tackle more complex problems.</p>
+
+        <p>Always use the following best practices when coding HTML.</p>
+      </section>
+
+
+      <section>
+        <h2>Name files properly</h2>
+
+        <p>Name all files for your web site using <em>lowercase letters</em> and <em>no spaces</em>. Avoid special characters.</p>
+
+        <p>Hyphens (<code>-</code>) or underscores (<code>_</code>) are acceptable in lieu of spaces, though hyphens are better for <abbr title="Search Engine Optimization">SEO</abbr> purposes.</p>
+
+        <p><strong>Bad:</strong> <code>Quorra's Home Page.html</code></p>
+
+        <p><strong>Good:</strong> <code>quorra-home-page.html</code></p>
+
+        <p>Some computer may not see <code>photo.jpg</code> and <code>photo.JPG</code> as being different, but case-sensitive web servers sees these as different files.</p>
+
+        <p>Using spaces or special characters in file names introduces hidden entities. A file named <code>miami beach.jpg</code> on your computer will be seen as <code>miami%20beach.jpg</code> on a web server.</p>
+      </section>
+
+
+      <section>
+        <h2>Write code in lowercase</h2>
+
+        <p>Write all HTML elements, attributes and values in lowercase.</p>
+
+        <p><strong>Bad:</strong> <code>&lt;P CLASS="Intro"&gt;This is a sentence&lt;/P&gt;</code></p>
+
+        <p><strong>Good:</strong> <code>&lt;p class="intro"&gt;This is a sentence&lt;/p&gt;</code></p>
+
+        <p>It is acceptable to use uppercase letters in <code>alt</code> or <code>title</code> values as these attributes contain content.</p>
+
+        <p><code>&lt;img src="my-cat.jpg" alt="Flynn the Cat" /&gt;</code></p>
+      </section>
+
+
+      <section>
+        <h2>Indent code</h2>
+
+        <p>The use of whitespace to indent and separate lines aids readability.</p>
+
+        <p><strong>Bad:</strong></p>
+
+        <pre class="code">&lt;ol&gt;&lt;li&gt;cat&lt;/li&gt;<br/>&lt;li&gt;dog&lt;/li&gt;<br/>&lt;li&gt;fish&lt;/li&gt;&lt;/ol&gt;</pre>
+
+        <p><strong>Good:</strong></p>
+
+        <pre class="code">&lt;ol&gt;<br/>  &lt;li&gt;cat&lt;/li&gt;<br/>  &lt;li&gt;dog&lt;/li&gt;<br/>  &lt;li&gt;fish&lt;/li&gt;<br/>&lt;/ol&gt;</pre>
+
+
+        <p>Indent code by two spaces for each level. This makes it easier to 'match' opening and closing tags.</p>
+
+        <p>If you use the <kbd>TAB</kbd> key for indenting, make sure you set tab length in your code editor's preferences to two spaces.</p>
+
+      </section>
+
+
+      <section>
+        <h2>Comment code</h2>
+
+        <p><code>&lt;!-- This is a comment. --&gt;</code></p>
+
+        <p>Comments enable you (or whomever inherits your code) to:</p>
+
+        <ul>
+          <li>identify parts of a page easily</li>
+          <li>understand the logic behind the code</li>
+          <li>explain what each part does</li>
+        </ul>
+
+        <p>Comments and proper style will aid page maintenance.</p>
+      </section>
+
+
+      <section>
+        <h2>Use a <code>DOCTYPE</code></h2>
+
+        <p>A <code>DOCTYPE</code> tells the web browser which version of HTML to use.</p>
+
+        <p><code>DOCTYPE</code> we will use indicates our code is written in HTML5:</p>
+
+        <p><code>&lt;!DOCTYPE html&gt;</code></p>
+
+        <p>When <code>DOCTYPE</code> is missing, the browser renders the page in <em>quirks mode</em>, which may break a web page.</p>
+      </section>
+
+
+      <section>
+        <h2>Declare a language</h2>
+
+        <p>Setting the default language of a page can positively impact:</p>
+
+        <ul>
+          <li>hyphenation</li>
+          <li>font selection</li>
+          <li>search</li>
+          <li>spell checkers</li>
+          <li>translation tools</li>
+        </ul>
+
+        <p>Set a language by adding the <code>lang</code> attribute and a <a href="https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">two-letter language code</a> to the <code>html</code> element.</p>
+
+        <p><code>&lt;html lang="en"&gt;</code></p>
+
+        <p>The <code>lang</code> attribute may be used with other tags if a document is multilingual.</p>
+
+      </section>
+
+
+      <section>
+        <h2>Declare a character set</h2>
+
+        <p>A character set indicates how letters, numbers and special characters should be displayed.</p>
+
+        <p><code>UTF-8</code> includes 1.1 million characters and is used by 85 percent of the web.</p>
+
+        <p>The following tag should appear in the <code>&lt;head&gt;</code> of a page:</p>
+
+        <p><code>&lt;meta charset="UTF-8" /&gt;</code></p>
+      </section>
+
+
+      <section>
+        <h2>Close tags</h2>
+
+        <p><strong>Bad:</strong> &lt;p&gt;example</p>
+
+        <p><strong>Good:</strong> &lt;p&gt;example&lt;/p&gt;</p>
+
+        <p>If an element is self-closing, add a slash (<code>/</code>) at the end of the tag.</p>
+
+        <p><code>&lt;img src="my-cat.jpg" alt="Flynn the Cat" /&gt;</code></p>
+
+      </section>
+
+
+      <section>
+        <h2>Provide attribute values</h2>
+
+        <p>Most attributes require a value. A few do not.</p>
+
+        <p>Add a value, even when not required.</p>
+
+        <p><code>&lt;audio controls="controls"&gt;&lt;/audio&gt;</code></p>
+      </section>
+
+
+      <section>
+        <h2>Quote attribute values</h2>
+
+        <p>Unquoted attributes can lead to broken code.</p>
+
+        <p><strong>Bad:</strong> <code>&lt;img src=photo.jpg alt=Sebastian the Ibis /&gt;</code></p>
+
+        <p>In the example above, a browser may mistake "the" and "Ibis" as attributes.</p>
+
+        <p><strong>Good:</strong> <code>&lt;img src="photo.jpg" alt="Sebastian the Ibis" /&gt;</code></p>
+
+        <p>Use double quotations (<code>""</code>), not single quotations (<code>''</code>).</p>
+
+      </section>
+
+
+      <section>
+        <h2>Encode hidden HTML entities</h2>
+
+        <p><em>HTML entities</em> (or 'escape codes') are special characters. They begin with an ampersand (<code>&amp;</code>) and end with a semicolon (<code>;</code>).</p>
+
+        <p>Whenever you want to use less than (<code>&lt;</code>), greater than (<code>&gt;</code>) or ampersand in HTML, it is necessary to encode these.</p>
+
+        <p>If ever a foreign character or symbol typed into code appears broken, it may need to be encoded. <a href="http://character-code.com/">Character Code</a> provides an awesome reference for HTML entities. The <a href="http://dev.w3.org/html5/html-author/charref">W3C</a> provides a comprehensive list, too.</p>
+      </section>
+
+
+      <section>
+        <h2>Use valid HTML</h2>
+
+        <p>Run your HTML documents through the <a href="http://validator.w3.org">W3C Validator</a> to test.</p>
+
+        <p>Coding with valid HTML assures forward and backward compatibility and limits problems when implementing CSS and JavScript. The validator can help find errors or bugs in code.</p>
+      </section>
+
+
+      <section>
+        <h2>Do not use deprecated elements</h2>
+
+        <p>Refrain from using tags which are no longer supported by the W3C specifications.</p>
+      </section>
+
+
+      <section>
+        <h2>Separate presentation from structure</h2>
+
+        <p>HTML has tags which are or have been used for visual presentation. These include <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code> and <code>&lt;hr/&gt;</code>.</p>
+
+        <p>The presentational functionality of these tags should be handled via CSS.</p>
+
+        <p>Make sure your HTML focuses solely on structure.</p>
+      </section>
+
+      <footer>
+        <p><a href="index.html">Course Notes</a></p>
+        <p><a href="08-structural-html.html">Structural HTML</a></p>
+      </footer>
+
+    </main>
+  </body>
+</html>
