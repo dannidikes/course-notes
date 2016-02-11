@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Block &amp; Inline Elements</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Block &amp; Inline Elements</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>Hidden Properties</h2>
+
+        <p>You may have already noticed: HTML elements take up space.</p>
+
+        <p>Each element has a hidden property. It is either a <em>block</em> or an <em>inline</em> element.</p>
+      </section>
+
+
+      <section>
+        <h2>Block Elements</h2>
+
+        <ul>
+          <li>take up the entire width available to them</li>
+          <li>begin on and create new lines</li>
+          <li>may contain other block or inline elements</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Elements with Block Properties</h2>
+
+        <ul>
+          <li><code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code></li>
+          <li><code>p</code></li>
+          <li><code>ul</code>, <code>ol</code> and <code>li</code></li>
+          <li><code>blockquote</code></li>
+          <li>HTML5 structural tags</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Inline Elements</h2>
+
+        <ul>
+          <li>only take up the space within its surrounding tags</li>
+          <li>do not begin on or create lines</li>
+          <li>may only contain other inline elements</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Elements with Inline Properties</h2>
+
+        <ul>
+          <li><code>a</code></li>
+          <li><code>abbr</code></li>
+          <li><code>del</code>, <code>ins</code></li>
+          <li><code>em</code>, <code>strong</code></li>
+          <li><code>mark</code></li>
+        </ul>
+
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics">MDN: HTML Element Reference: Inline text semantics</a></p>
+      </section>
+
+
+      <section class="clearfix">
+        <h2>Elephants &amp; Snakes</h2>
+
+        <p>Block elements should not go inside inline elements...</p>
+
+        <img src="images/08-elephant-snake.png" alt="A weird example of putting a block element inside an inline element -- bad!" class="resized" />
+
+
+        <p class="inline-right">... just like elephants do not belong inside snakes.</p>
+      </section>
+
+
+      <section>
+        <h2>Block or Inline?</h2>
+
+        <p>Chrome Developer Tools can help indicate an element's display property.</p>
+
+        <p>By hovering the mouse cursor over a line of code (or using the "select an element" setting), a visual cue will appear in the body to show whether the element takes up 100 percent of the space available to it (<em>block</em>), or just the space it needs (<em>inline</em>).</p>
+
+        <p>Another option: In the right panel of the "Elements" console of Chrome Developer Tools, look at the <code>display</code> value in the <em>user agent stylesheet</em>.</p>
+      </section>
+
+
+      <section>
+        <h2><code>div</code></h2>
+
+        <p>A <code>div</code> tag is a block element which does not have any semantic meaning.</p>
+
+        <p><strong>W3C:</strong></p>
+
+        <blockquote>Authors are strongly encouraged to view the <code>div</code> element as an element of last resort, for when no other element is suitable.</blockquote>
+      </section>
+
+
+      <section>
+        <h2><code>span</code></h2>
+
+        <p>A <code>span</code> tag is an inline element which does not have any semantic meaning.</p>
+
+        <p><strong>W3C:</strong></p>
+
+        <blockquote>The <code>span</code> element doesn't mean anything on its own, but can be useful when used together with the global attributes, e.g. <code>class</code>, <code>lang</code>, or <code>dir</code>.</blockquote>
+      </section>
+
+
+      <section>
+        <h2>Tip</h2>
+
+        <p>Always use semantic tags before resorting to a <code>span</code> or <code>div</code> tag.</p>
+
+        <p>Only use <code>span</code> and <code>div</code> when presentational grouping is required and no semantic tag will suffice.</p>
+      </section>
+
+    </main>
+
+    <footer>
+      <p><a href="index.html">Course Notes</a></p>
+      <p><a href="09-global-attributes.html">Global Attributes</a></p>
+    </footer>
+  </body>
+</html>
