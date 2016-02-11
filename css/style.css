@@ -175,6 +175,20 @@ iframe {
 
 
 /* classes */
+
+.clearfix {
+  overflow: auto;
+}
+
+.floating-bottom {
+  border-bottom: 1px solid #ccc;
+}
+
+.inline-right {
+  float: right;
+  display: inline-block;
+}
+
 .photo {
   border: 1px solid #222;
 }
@@ -191,6 +205,11 @@ iframe {
 
 .hidden:hover {
   color: #222;
+}
+
+.emoji {
+  font-size: 72px;
+  margin: 0;
 }
 
 
