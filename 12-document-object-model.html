@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document Object Model</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Document Object Model</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>What is the Document Object Model (DOM)?</h2>
+
+        <p>The <abbr title="Document Object Model">DOM</abbr> is what results when a browser processes HTML. It:</p>
+
+        <ul>
+          <li>turns our document into a tree-like structure</li>
+          <li>applies (hidden) properties</li>
+          <li>establishes relationships among elements</li>
+        </ul>
+
+        <p>The DOM is an <em>application programming interface</em> (<abbr="Application Programming Interface">API</abbr>) &mdash; simply put, the way in which one can interact with HTML using CSS or JavaScript.</p>
+      </section>
+
+      <section>
+        <h2>The HTML Family Tree</h2>
+
+        <p><a href="examples/12-document-object-model/index.html">Example</a></p>
+
+        <img src="images/12-html-tree.png" alt="HTML Tree" class="resized"/>
+      </section>
+
+
+      <section>
+        <h2>How are the elements related?</h2>
+
+        <article>
+          <h3><code>html</code></h3>
+
+          <ul>
+            <li>has no parents</li>
+            <li>has two children: <code>head</code>, <code>body</code>
+              <ul>
+                <li><code>head</code> is its first child</li>
+                <li><code>body</code> is its last child</li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+
+        <article>
+          <h3><code>head</code></h3>
+
+          <ul>
+            <li>has one parent: <code>html</code></li>
+            <li>has one sibling: <code>body</code></li>
+            <li>has two children: <code>title</code>, <code>meta</code></li>
+          </ul>
+        </article>
+
+        <article>
+          <h3><code>body</code></h3>
+
+          <ul>
+            <li>has one parent: <code>html</code></li>
+            <li>has one sibling: <code>head</code></li>
+            <li>has two children: <code>h1</code>, <code>p</code>
+              <ul>
+                <li><code>h1</code> is the first child</li>
+                <li><code>p</code> is the last child</li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+
+        <article>
+          <h3><code>h1</code> and <code>p</code></h3>
+
+          <ul>
+            <li>has one parent: <code>body</code></li>
+            <li>are siblings</li>
+          </ul>
+        </article>
+      </section>
+
+    </main>
+
+    <footer>
+      <p><a href="index.html">Course Notes</a></p>
+      <p><a href="13-css-primer.html">CSS Primer</a></p>
+    </footer>
+  </body>
+</html>

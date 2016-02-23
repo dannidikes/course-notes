@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Anatomy</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>CSS Anatomy</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>CSS Blocks</h2>
+
+        <p>This is a CSS block:</p>
+
+        <p><code>selector { property: value; }</code></p>
+      </section>
+
+
+      <section>
+        <h2>Selectors</h2>
+
+        <p>The selector identifies the part of our HTML to be styled.</p>
+
+        <p>This can be:</p>
+
+        <ul>
+          <li>a specific element (<code>&lt;p&gt;</code>)</li>
+          <li>an id (<code>#preamble</code>)</li>
+          <li>a class (<code>.branches-of-gov</code>)</li>
+        </ul>
+
+      </section>
+
+
+      <section>
+        <h2>Complex Selectors</h2>
+
+        <p>There are ways of combining selectors to isolate elements based on how they relate to other elements.</p>
+
+        <ul>
+          <li>universal</li>
+          <li>type</li>
+          <li>child</li>
+          <li>descendant</li>
+          <li>adjacent sibling</li>
+          <li>general sibling</li>
+          <li>attribute</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Declaration</h2>
+
+        <p>The part enclosed within the curly braces (<code>{ }</code>) is called a <em>declaration</em>, which is comprised of a <em>property</em> and <em>value</em>.</p>
+
+        <pre class="code">selector { property: value; }</pre>
+
+        <p>We can specify multiple declarations for each selector. We just need to separate each on with a semicolon (<code>;</code>).
+
+        <pre class="code">selector {<br/>  property: value;<br/>  property2: value2;</br>}</pre>
+      </section>
+
+
+      <section>
+        <h2>Properties &amp; Values</h2>
+
+        <p>A property and its value are separated by a colon (<code>:</code>).</p>
+
+        <p>There are <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">hundreds! of properties</a> we can change.</p>
+
+        <p>Values vary based on the property.</p>
+      </section>
+
+
+      <section>
+        <h2>Examples of CSS Properties</h2>
+
+        <ul>
+          <li>Color
+            <ul>
+              <li><code>color</code> (text color)</li>
+              <li><code>background-color</code></li>
+            </ul>
+          </li>
+          <li>Text
+            <ul>
+              <li><code>font-family</code></li>
+              <li><code>font-size</code></li>
+              <li><code>font-style</code></li>
+              <li><code>font-weight</code></li>
+              <li><code>line-height</code></li>
+              <li><code>text-align</code></li>
+              <li><code>text-decoration</code></li>
+              <li><code>text-transform</code></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Looking ahead</h2>
+
+        <ul>
+          <li>Read Chapters 11 &amp; 12 of <em>HTML &amp; CSS</em></li>
+          <li>Explore properties listed in the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">MDN: CSS Reference</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <!--footer>
+      <p><a href="index.html">Course Notes</a></p>
+      <p><a href="15-.html"></a></p>
+    </footer-->
+  </body>
+</html>

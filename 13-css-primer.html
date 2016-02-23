@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Primer</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>CSS Primer</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>What is CSS?</h2>
+
+        <p>CSS stands for <em>Cascading Style Sheets</em>.</p>
+
+        <p>It is a language used to describe the presentation of markup.</p>
+      </section>
+
+
+      <section>
+        <h2>Why "Cascading"?</h2>
+
+        <p>When CSS is applied to an element, its children inherit the properties we establish.</p>
+
+        <p>For instance, if the following styles are applied to <code>body</code>:</p>
+
+        <ul>
+          <li>font-size: 16 pixels</li>
+          <li>font-family: "Helvetica"</li>
+        </ul>
+
+        <p>All text, regarless of surrounding tags (i.e. <code>p</code>, <code>li</code>, <code>blockquote</code>, etc.) be displayed in Helvetica, 16 pixels.</p>
+      </section>
+
+
+      <section>
+        <h2>Presenting Media</h2>
+
+        <p>CSS is predominantly used for visual styling, however it may be used to present markup for:</p>
+
+        <ul>
+          <li>print</li>
+          <li>handheld devices</li>
+          <li>television</li>
+          <li>projectors</li>
+          <li>speech</li>
+          <li>braille</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>CSS Evolution</h2>
+
+        <ul>
+          <li>Emerged from a desire to improve visual presentation</li>
+          <li>1994: First draft published by H&aring;kon Wium Lee</li>
+          <li>1996: CSS 1 adopted by Netscape, Internet Explorer
+            <ul>
+              <li>limited to colors, fonts and text and 'box' properties</li>
+            </ul>
+          </li>
+          <li>1998: CSS 2.1 introduced in 1998
+            <ul>
+              <li>added new media types, positioning, user interface</li>
+            </ul>
+          </li>
+          <li>Today: CSS 3
+            <ul>
+              <li>added animation, transitions, web fonts</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Why use CSS?</h2>
+
+        <ul>
+          <li>design consistency</li>
+          <li>avoids duplication</li>
+          <li>allows for site-wide changes in one place</li>
+          <li>faster page downloads</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>A scenario</h2>
+
+        <p>You maintain a web site of 100,000 pages. In every HTML page, you include:</p>
+
+        <ul>
+          <li>presentational elements such as &lt;b&gt; or &lt;hr/&gt;</li>
+          <li>inline styles which set every &lt;p&gt; to display in <span style="font-family:'Helvetica'; color: limegreen;">Helvetica and lime green</span></li>
+        </ul>
+
+        <p><small>Yikes. Stano is weeping.</small></p>
+      </section>
+
+
+      <section>
+        <h2>Your boss</h2>
+
+        <p><q>That looks awful. Get rid of the horizontal rules. Why are we randomly making things bold? Change the font and color.</q> &#128544;</p>
+      </section>
+
+
+      <section>
+        <h2>There goes your weekend</h2>
+
+        <p>You now have to search through 100,000 pages, remove each &lt;b&gt; and &lt;hr/&gt; tag and change the font and color of every paragraph.</p>
+
+        <p>Will you find every instance?</p>
+
+        <p>Is it possible deleting tags may break the site?</p>
+
+        <p>What if, after all the changes, the boss wants something different?</p>
+      </section>
+
+
+      <section>
+        <h2>A Better Option</h2>
+
+        <p>Instead of hard-coding the look and feel of our site in HTML, we can add a style sheet to each page.</p>
+
+        <pre class="code">&lt;link href="style.css" rel="stylesheet" /&gt;</pre>
+
+        <p>Within this file, rules on how to style elements, classes or ids (or a combination of) are defined.</p>
+
+        <pre class="code">p {<br/>  color: black;<br/>  font-family: "Avenir", sans-serif;<br/>}</pre>
+      </section>
+
+
+      <section>
+        <h2>Applying CSS to HTML</h2>
+
+        <p>There are three ways to add CSS to HTML:</p>
+
+        <ul>
+          <li>inline styles</li>
+          <li>the <code>&lt;style&gt;</code> tag</li>
+          <li>external style sheet</li>
+        </ul>
+
+        <p><strong>ALWAYS</strong> use an external style sheet.</p>
+      </section>
+
+
+      <section>
+        <h2>Inline Styles</h2>
+
+        <p><code>style</code> is a global attribute.</p>
+
+        <p>Adding this attribute to a tag results in presentation becoming hard-coded in HTML. Its use contradicts the benefits of CSS.</p>
+
+        <p><strong>NEVER</strong> use inline styles.</p>
+      </section>
+
+
+      <section>
+        <h2>the <code>&lt;style&gt;</code> tag</h2>
+
+        <p>Styles can be defined within the &lt;head&gt; of a document by including the style tag.</p>
+
+        <p><strong>ONLY</strong> use the style tag for prototyping.</p>
+
+        <p>When the styles for a design are fine-tuned, extract them and place them in an external style sheet. Link all pages to the external style sheet.</p>
+
+          <strong>NEVER</strong> build and/or publish site which uses a <code>&lt;style&gt;</code> tag in HTML. Its use contradicts the benefits of CSS.</p>
+      </section>
+
+
+      <section>
+        <h2>External Style Sheets</h2>
+
+        <p>Store CSS rules in a single file.</p>
+
+        <p>Within each HTML file, include a link in the <code>&lt;head&gt;</code> tag to this central CSS file.</p>
+
+        <pre class="code">&lt;link href="css/style.css" rel="stylesheet" /&gt;</pre>
+
+        <p>When rules are applied or changed in the CSS file, they will apply to all HTML documents which link to it.</p>
+      </section>
+
+
+      <section>
+        <h2>Don't forget HTML</h2>
+
+        <p>When styling a web page, <strong>ALWAYS</strong> make sure you are working with <strong>VALID</strong> HTML.</p>
+
+        <p>Open, broken tags or incorrect attribute values <em>will break your CSS</em>.</p>
+
+        <p>Build the HTML first. Then apply CSS.</p>
+
+        <p>If you adjust HTML as you style, re-validate the code after a change.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="index.html">Course Notes</a></p>
+      <p><a href="14-css-anatomy.html">CSS Anatomy</a></p>
+    </footer>
+  </body>
+</html>
